@@ -26,11 +26,18 @@
 const numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?', '');
 console.log(numberOfFilms);
 
-const personalMovieDB = {
+var personalMovieDB = {
 	count : numberOfFilms,
 	movies : {},
 	actors : {},
 	genres : [],
 	privat : false
 };
+console.log(personalMovieDB);
+
+const lastMovieSeen = prompt('Один из последних просмотренных фильмов?', '');
+const lastMovieRate = prompt('На сколько оцените его?', '');
+
+personalMovieDB.movies[lastMovieSeen] = lastMovieRate;
+
 console.log(personalMovieDB);
