@@ -17,41 +17,44 @@ P.S. Здесь есть несколько вариантов решения з
 
 'use strict';
 
-const	movieDB = {
-		movies: [
-		"Логан",
-		"Лига справедливости",
-		"Ла-ла лэнд",
-		"Одержимость",
-		"Скотт Пилигрим против..."
-		]
-};
+document.addEventListener('DOMContentLoaded', () => {
 
-const	adv = document.querySelectorAll('.promo__adv img'),
-		poster = document.querySelector('.promo__bg'),
-		genre = poster.querySelector('.promo__genre'),
-		movieList = document.querySelector('.promo__interactive-list');
+	const	movieDB = {
+			movies: [
+			"Логан",
+			"Лига справедливости",
+			"Ла-ла лэнд",
+			"Одержимость",
+			"Скотт Пилигрим против..."
+			]
+	};
 
-adv.forEach(item => {
-	item.remove();
-});
+	const	adv = document.querySelectorAll('.promo__adv img'),
+			poster = document.querySelector('.promo__bg'),
+			genre = poster.querySelector('.promo__genre'),
+			movieList = document.querySelector('.promo__interactive-list');
 
-genre.textContent = 'драма';
+	adv.forEach(item => {
+		item.remove();
+	});
 
-poster.style.backgroundImage = 'url("img/bg.jpg")';
+	genre.textContent = 'драма';
 
-movieList.innerHTML = "";
+	poster.style.backgroundImage = 'url("img/bg.jpg")';
 
-movieDB.movies.sort();
+	movieList.innerHTML = "";
 
-movieDB.movies.forEach((film, i) => {
-	movieList.innerHTML += `
-		<li class="promo__interactive-item">${i + 1} ${film}
-			<div class="delete"></div>
-		</li>
-	`;
-});
+	movieDB.movies.sort();
 
+	movieDB.movies.forEach((film, i) => {
+		movieList.innerHTML += `
+			<li class="promo__interactive-item">${i + 1} ${film}
+				<div class="delete"></div>
+			</li>
+		`;
+	});
+
+});// DOMContentLoaded
 
 // ************** my code, except #3 ****************
 // document.addEventListener('DOMContentLoaded', () => {
