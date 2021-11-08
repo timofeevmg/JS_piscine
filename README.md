@@ -1,7 +1,7 @@
 # JS_piscine
 JavaScript self-learning projects from udemy.com and etc.
 
-Практические примеры:
+Практические примеры(JS_PRACTIC):
 
 38. Создаем табы в новом проекте
 
