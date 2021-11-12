@@ -1,0 +1,35 @@
+a {
+	color: red;
+	font-size: 40px;
+}
+
+div {
+	color: #223db5;
+}
+
+#link2 {
+	color: yellow;
+}
+
+.first {
+	color:violet
+}
+
+.second {
+	color:springgreen
+}
+
+p.red {
+	color: red;
+	font-size: 20px;
+}
+
+.important {
+	color: green;
+	font-style: italic;
+}
+
+#main_title {
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	color: #ff00cf;
+}
