@@ -1,5 +1,5 @@
 # JS_piscine
-JavaScript self-learning projects from udemy.com and etc.
+Frontend self-learning projects from udemy.com, hexlet.io, learnlayout.com.
 
 Практические примеры(JS_PRACTIC):
 
