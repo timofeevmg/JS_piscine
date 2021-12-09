@@ -12,5 +12,5 @@ Frontend self-learning projects from udemy.com, hexlet.io, learnlayout.com.
 45. Модификации модального окна
 
 48. Используем классы в реальной работе
--
+--
 27. Задачи с собеседований на приведение типов
