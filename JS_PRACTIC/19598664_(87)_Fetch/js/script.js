@@ -249,7 +249,7 @@ window.addEventListener('DOMContentLoaded', () => {
 		postData(item);
 	});
 
-	// *** send form as FormData ***
+	// // *** send form as FormData ***
 	// function	postData(form) {
 	// 	form.addEventListener('submit', (e) => {
 	// 		e.preventDefault();
@@ -297,9 +297,6 @@ window.addEventListener('DOMContentLoaded', () => {
 			// form.append(statusMessage);
 			form.insertAdjacentElement('afterend', statusMessage);
 
-			const request = new XMLHttpRequest();
-			request.open('POST', 'server.php');
-			request.setRequestHeader('Content-type', 'application/json; charset=utf-8');
 			const formData = new FormData(form);
 
 			const object = {};
@@ -308,17 +305,24 @@ window.addEventListener('DOMContentLoaded', () => {
 			});
 			const json = JSON.stringify(object);
 
-			request.send(json);
-
-			request.addEventListener('load', () => {
-				if (request.status === 200) {
-					console.log(request.response);
-					showThanksModal(message.success);
-					form.reset();
-					statusMessage.remove();
-				} else {
-					showThanksModal(message.failure);
-				}
+			fetch('server.php', {
+				method: 'POST',
+				headers: {
+					'Content-type': 'application/json; charset=utf-8'
+				},
+				body: json
+			})
+			.then(data => data.text())
+			.then(data => {
+				console.log(data);
+				showThanksModal(message.success);
+				statusMessage.remove();
+			})
+			.catch(() => {
+				showThanksModal(message.failure);
+			})
+			.finally(() => {
+				form.reset();
 			});
 		});
 	}
@@ -347,4 +351,14 @@ window.addEventListener('DOMContentLoaded', () => {
 			closeModal();
 		}, 4000);
 	}
+
+	// fetch('https://jsonplaceholder.typicode.com/posts', {
+	// 	method: 'POST',
+	// 	body: JSON.stringify({name: 'Alex'}),
+	// 	headers: {
+	// 		'Content-type': 'application/json'
+	// 	}
+	// })
+	// 	.then(response => response.json())
+	// 	.then(json => console.log(json));
 });
