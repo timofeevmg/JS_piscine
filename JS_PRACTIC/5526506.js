@@ -30,11 +30,14 @@ function showListOfFilms(arr) {
 }
 
 function setFilmsIds(arr) {
-
+	return arr.map( (film, index) => {
+		film.id = index;
+		return film;
+	});
 }
 
 const tranformedArray = setFilmsIds(films);
 
 function checkFilms(arr) {
-
+	return arr.every(film => 'id' in film);
 }
