@@ -1,0 +1,1 @@
+use "npx json-server db.json"
