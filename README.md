@@ -11,10 +11,18 @@ Frontend self-learning projects from udemy.com, hexlet.io, learnlayout.com.
 ---
 27. Задачи с собеседований на приведение типов.
 ---
-74. MutationObserver  
-83. AJAX (XHR). 
-84. JSON (send to server). 
-86. promise  
-87. fetch  
+74. MutationObserver
+
+83. AJAX (XHR)
+
+84. JSON (send to server)
+
+86. promise
+
+87. fetch
+
+89. json-server
+
 90. async/await
+
 91. axios
