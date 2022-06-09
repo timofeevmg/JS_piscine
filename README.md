@@ -20,3 +20,6 @@ Frontend self-learning projects from udemy.com, hexlet.io, learnlayout.com.
 89.json-server  
 90.async/await  
 91.axios([link](https://github.com/axios/axios))  
+
+---
+TASKS - solved math & algo JS problems  
